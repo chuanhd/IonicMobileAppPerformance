@@ -11,7 +11,7 @@ export class HomePage {
 
   constructor(public navCtrl: NavController, private multi : Multi) {
     console.log("Homepage constructor invoked");
-    multi.readFile()
+    // multi.readFile()
   }
 
 }
