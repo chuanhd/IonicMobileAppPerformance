@@ -3,11 +3,11 @@ export class Physics {
 
     }
 
-    distance(velocity : number, acceleration : number, time : number) {
+    static distance(velocity : number, acceleration : number, time : number) {
         return velocity * time + (acceleration * time * time) / 2.0;
     }
 
-    time(distance : number, velocity : number, acceleration : number) {
+    static time(distance : number, velocity : number, acceleration : number) {
         if (acceleration === 0) {
             return distance / velocity;
         } else {

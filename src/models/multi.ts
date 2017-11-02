@@ -19,8 +19,11 @@ export class Multi {
         //     console.log("Asset directory exists")
         // ).catch(err => console.log("Asset directory not exist"))
 
-        return new Promise(() => {
-            
+        return new Promise((resolve, reject) => {
+            this.file.readAsText(this.file.applicationDirectory, './www/assets/multi_lap_session.csv').then(_fileStr => {
+                // this.contents = _fileStr
+                resolve(_fileStr)
+            })
         })
 
     }
