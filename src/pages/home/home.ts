@@ -12,8 +12,8 @@ import { Multi } from '../../models/multi';
 })
 export class HomePage {
 
-  runningAThoudsandTimeValue : string = "Result: 0"
-  runningTenThoudsandsTimeValue : string = "Result: 0"
+  runningAThoudsandTimeValue = "Result: 0"
+  runningTenThoudsandsTimeValue = "Result: 0"
 
   @ViewChild('lblAThoudsandTimesResult') lblAThoudsandTimesResultElement : ElementRef;
   // lblAThoudsandTimesResult
@@ -27,7 +27,7 @@ export class HomePage {
   }
 
   ngAfterViewInit() {
-
+    
   }
 
   runAThoudsandTimes(event) {
@@ -37,6 +37,7 @@ export class HomePage {
         var run = new Run(_fileContent)
         let timeStr = run.run(1000).toString()
         console.log('Run 1000 times: ', timeStr)
+        this.runningAThoudsandTimeValue = timeStr
       })
     })
   }
@@ -48,6 +49,7 @@ export class HomePage {
         var run = new Run(_fileContent)
         let timeStr = run.run(10000).toString()
         console.log('Run 10000 times: ', timeStr)
+        this.runningTenThoudsandsTimeValue = timeStr
       })
     })
   }

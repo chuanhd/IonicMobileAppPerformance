@@ -9,10 +9,10 @@
 <ion-content padding>
   <div>
     <button ion-button (click)="runAThoudsandTimes($event)">Run 1000 times</button>
-    <ion-label id="lblAThoudsandTimesResult" [(ngModel)]="runningAThoudsandTimeValue">Result: </ion-label>
+    <ion-input id="lblAThoudsandTimesResult" readonly="true" placeholder="Result: " [(ngModel)]="runningAThoudsandTimeValue"></ion-input>
   </div>
   <div>
       <button ion-button (click)="runTenThoudsandsTimes($event)">Run 10000 times</button>
-      <ion-label id="lblTenThoudsandsTimesResult" [(ngModel)]="runningTenThoudsandsTimeValue">Result: </ion-label>
+      <ion-input id="lblTenThoudsandsTimesResult" readonly="true" placeholder="Result: " [(ngModel)]="runningTenThoudsandsTimeValue"></ion-input>
   </div>
 </ion-content>
